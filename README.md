@@ -1,6 +1,6 @@
-# familyprivatehighschool
+# Family Memes Just For Fun
 
-Static website for Family Private High School Community.
+Static website for Family Memes Just For Fun.
 
 ## Deployment
 
