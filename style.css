@@ -417,6 +417,15 @@ a {
   transition: transform var(--transition), background var(--transition);
 }
 
+.hero-panel-wide {
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hero-panel-wide .panel-row {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .hero-panel .panel-item:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.14);
@@ -1126,6 +1135,10 @@ a {
   .thingyan-timer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .hero-panel-wide .panel-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -1170,6 +1183,10 @@ a {
   }
 
   .hero-panel .panel-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel-wide .panel-row {
     grid-template-columns: 1fr;
   }
 
