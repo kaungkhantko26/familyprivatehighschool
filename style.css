@@ -86,6 +86,15 @@ body {
   line-height: 1.7;
 }
 
+main {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+main > section:last-of-type {
+  padding-bottom: 0;
+}
+
 body.menu-open {
   overflow: hidden;
 }
@@ -158,6 +167,10 @@ a {
   box-shadow: var(--shadow-sm);
 }
 
+.brand-copy > * + * {
+  margin-top: 0.3rem;
+}
+
 .branding {
   display: flex;
   align-items: center;
@@ -210,13 +223,6 @@ a {
   color: var(--brand);
 }
 
-.eyebrow-myanmar {
-  font-family: "MyanmarKhyay", "Noto Sans Myanmar", sans-serif;
-  letter-spacing: 0;
-  text-transform: none;
-  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
-}
-
 .hero-title-myanmar {
   font-family: "MyanmarKhyay", "Noto Sans Myanmar", sans-serif;
   font-size: clamp(2rem, 5vw, 4rem);
@@ -252,7 +258,7 @@ a {
 }
 
 .brand-copy p {
-  margin: 0.2rem 0 0;
+  margin: 0.15rem 0 0;
   color: var(--text-soft);
   font-size: 0.96rem;
 }
@@ -324,11 +330,13 @@ a {
 }
 
 .hero-section {
-  padding: 2.5rem 0 1.5rem;
+  padding: 2rem 0 1.25rem;
 }
 
 .page-hero,
 .article-hero {
+  display: grid;
+  gap: 0.95rem;
   position: relative;
   overflow: hidden;
   padding: clamp(1.8rem, 4vw, 3rem);
@@ -354,21 +362,33 @@ a {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.95fr);
-  gap: 1.5rem;
+  gap: 1.35rem;
   align-items: end;
+  margin-top: 0.25rem;
 }
 
 .page-hero h1,
 .article-hero h1 {
   color: #fff;
-  font-size: clamp(2.1rem, 5vw, 4.4rem);
+  font-size: clamp(1.85rem, 4vw, 3.1rem);
   max-width: 11ch;
+}
+
+.article-hero h1 {
+  max-width: 18ch;
+  font-size: clamp(1.65rem, 3.6vw, 2.7rem);
+}
+
+.article-hero .lead {
+  max-width: 58ch;
+  margin-top: 0.65rem;
+  font-size: 0.96rem;
 }
 
 .lead {
   max-width: 60ch;
-  margin: 1rem 0 0;
-  font-size: 1.03rem;
+  margin: 0.65rem 0 0;
+  font-size: 0.97rem;
   color: rgba(255, 252, 247, 0.86);
 }
 
@@ -377,7 +397,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 
 .hero-panel,
@@ -394,8 +414,8 @@ a {
 
 .hero-panel {
   display: grid;
-  gap: 1rem;
-  padding: 1.35rem;
+  gap: 0.9rem;
+  padding: 1.2rem;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
@@ -427,18 +447,18 @@ a {
 .hero-panel .panel-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.85rem;
+  gap: 0.8rem;
 }
 
 .hero-panel .panel-item {
-  padding: 1rem;
+  padding: 0.9rem;
   border-radius: 1.25rem;
   background: rgba(255, 255, 255, 0.08);
   transition: transform var(--transition), background var(--transition);
 }
 
 .hero-panel-wide {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.05rem;
   background: rgba(255, 255, 255, 0.14);
 }
 
@@ -452,7 +472,7 @@ a {
 }
 
 .section {
-  padding: 1.25rem 0 1.5rem;
+  padding: 1.2rem 0 1.2rem;
 }
 
 .section-heading {
@@ -461,7 +481,7 @@ a {
   align-items: end;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
 .section-heading h2 {
@@ -483,7 +503,7 @@ a {
 .two-column,
 .campus-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.15rem;
 }
 
 .card-grid {
@@ -518,7 +538,7 @@ a {
 .news-card,
 .info-card,
 .highlight-panel {
-  padding: 1.45rem;
+  padding: 1.3rem;
   border-radius: var(--radius-md);
   transition:
     transform var(--transition-slow),
@@ -767,7 +787,7 @@ a {
 .story-card,
 .news-card {
   display: grid;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .story-card img,
@@ -831,19 +851,19 @@ a {
 }
 
 .article-section {
-  padding: 1.25rem 0 3rem;
+  padding: 1.2rem 0 2.6rem;
 }
 
 .article-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.55fr);
-  gap: 1.25rem;
+  gap: 1.1rem;
   align-items: start;
 }
 
 .article-card {
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
   background: rgba(255, 253, 249, 0.88);
 }
 
@@ -862,20 +882,20 @@ a {
 
 .article-body {
   display: grid;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
-.article-body p + p {
-  margin-top: 0.1rem;
+.article-body p {
+  margin: 0;
 }
 
 .article-aside {
   display: grid;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 
 .aside-card {
-  padding: 1.25rem;
+  padding: 1.1rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(18, 32, 51, 0.08);
   background: rgba(255, 253, 249, 0.88);
@@ -900,7 +920,7 @@ a {
 
 .gallery-stack {
   display: grid;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .gallery-stack img {
@@ -967,7 +987,7 @@ a {
 
 .campus-card {
   display: grid;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 
 .map-frame {
@@ -992,7 +1012,7 @@ a {
 
 .stats-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -1020,7 +1040,7 @@ a {
 }
 
 .footer {
-  padding: 1.2rem 0 2.6rem;
+  padding: 0.8rem 0 2rem;
 }
 
 .footer-panel {
@@ -1230,7 +1250,7 @@ a {
   }
 
   .article-body {
-    gap: 0.9rem;
+    gap: 0.75rem;
   }
 
   .article-cover figcaption,
@@ -1285,11 +1305,11 @@ a {
   }
 
   .hero-section {
-    padding: 1.2rem 0 1rem;
+    padding: 1rem 0 0.9rem;
   }
 
   .section {
-    padding: 1rem 0 1.2rem;
+    padding: 0.85rem 0 0.95rem;
   }
 
   .section-heading {
@@ -1320,7 +1340,7 @@ a {
   .hero-panel,
   .stat-card,
   .thingyan-card {
-    padding: 1.05rem;
+    padding: 0.95rem;
   }
 
   .nav-links {
