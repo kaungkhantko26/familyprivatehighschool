@@ -23,6 +23,12 @@
   --transition-slow: 520ms cubic-bezier(.2, .8, .2, 1);
 }
 
+@font-face {
+  font-family: "MyanmarKhyay";
+  src: url("MyanmarKhyay.ttf") format("truetype");
+  font-display: swap;
+}
+
 @keyframes fade-slide-up {
   from {
     opacity: 0;
@@ -202,6 +208,20 @@ a {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brand);
+}
+
+.eyebrow-myanmar {
+  font-family: "MyanmarKhyay", "Noto Sans Myanmar", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+}
+
+.hero-title-myanmar {
+  font-family: "MyanmarKhyay", "Noto Sans Myanmar", sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: 0;
 }
 
 .eyebrow::before {
